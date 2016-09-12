@@ -171,6 +171,7 @@ function exitmode {
 	if [ "$WIFI" != "" ]; then
 		echo -e ""$weis"["$rot"-"$weis"] "$weis"$general_exitmode_2 "$verde"$WIFI"$transparent""
 		./airmon stop $WIFI &> $flux_output_device
+		macchanger -p $WIFI &> $flux_output_device
 	fi
 
 
